@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Promedio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="context">
+        <h1 class="text-black">Ejercicio 3</h1>
+        <h1 class="text-black">Sacar promedio de los alumnos </h1>
+        <br>
+        <div id="packck" style="">
+
+
+    <div class="" >
+    
+        <div class="row " style="text-align: center;">
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="input-group-prepend">
+                    <span class="" id="basic-addon1">Cedula del Alumno</span>
+                </div>
+                <input type="number" style="font-weight: bold;" id="CI" class="form-control"  placeholder="a" aria-label="a" value=0
+                    aria-describedby="basic-addon1" >
+                    <br>
+            </div>
+    <br>
+            <div class=" " style="width: auto;">
+                <div class="">
+                    <span class="" id="basic-addon1">Nombre del Alumno</span>
+                </div>
+                <input type="text" style="font-weight: bold;" id="nam" class="form-control"  placeholder="b" aria-label="b" value="Nombre"
+                    aria-describedby="basic-addon1" >
+                    
+            </div>
+    
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Nota de matemáticas</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="mate" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" max=20 min=0>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Nota de física</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="fi" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" max=20 min=0>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Nota de programación</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="pro" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" max=20 min=0 >
+                    
+            </div>
+
+
+    
+        </div>
+
+    </div>
+    </div>
+<br><br>
+    </button> <input type="button" class="btn btn-primary mx-auto d-block" onclick="agregar()"
+    value="Siguiente Alumno"  role="button"><br>
+        </button> <input type="button" class="btn btn-primary mx-auto d-block" onclick="simular()"
+    value="Resultado final"  role="button"><br>
+
+
+<div id="todosLosResultados" style="display:none ;">
+
+
+    <div class="" >
+    
+        <div class="row " style="text-align: center;">
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="input-group-prepend">
+                    <span class="" id="basic-addon1">Todos los alumnos</span>
+                </div>
+                <input type="text" style="font-weight: bold;" id="TA" class="form-control"  placeholder="a" aria-label="a" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    <br>
+            </div>
+    <br>
+            <div class=" " style="width: auto;">
+                <div class="">
+                    <span class="" id="basic-addon1">Promedio de matemáticas</span>
+                </div>
+                <input type="number" style="font-weight: bold;" id="MATE" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+    
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Promedio de física</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="FISI" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Promedio de Programación</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="PRO" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Numero de reprobados en matematicas</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="am" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Numero de reprobados en fisica</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="af" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Numero de reprobados en Programación</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="ap" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Numero de aprobados en matematicas</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="aam" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Numero de aprobados en fisica</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="aaf" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Numero de aprobados en Programación</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="aap" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Numero de Alumnos que aprobaron todas las materias</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="todas" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Numero de Alumnos que aprobaron solo dos materias</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="Solodos" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Numero de Alumnos que aprobaron solo una materia</span>
+                </div>
+               
+                <input type="number" style="font-weight: bold;" id="Solouna" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+
+            <div class="input-group mb-3 " style="width: auto;">
+                <div class="" >
+                    <span class="" id="basic-addon1">Nota maxima de cada materia</span>
+                </div>
+               
+                <input type="text" style="font-weight: bold;" id="maxima" class="form-control"  placeholder="b" aria-label="b" value=0
+                    aria-describedby="basic-addon1" disabled>
+                    
+            </div>
+    
+        </div>
+
+    </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+
+</html>
